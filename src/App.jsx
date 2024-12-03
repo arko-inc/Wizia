@@ -16,7 +16,7 @@ function App() {
 
   React.useEffect(() => {
     // Simulate a network request
-    setTimeout(() => setLoading(false), 100);
+    setTimeout(() => setLoading(false), 1000);
   }, []);
 
   return (
