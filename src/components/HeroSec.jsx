@@ -56,7 +56,7 @@ const HeroSec = () => {
           className="text-left"
           style={{ fontFamily: 'Work, sans-serif', fontSize: '20px', fontWeight: '300' }}
         >
-          Train an aiDR on your ICP and messaging matrix.
+          Train an aiDR on your ICP and messaging matrix. 
         </Typography>
         <Typography
           variant="body1"
