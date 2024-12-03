@@ -1,0 +1,34 @@
+.loading-container {
+    background-color: #002228;
+  }
+  
+  .loading-animation {
+    text-align: center;
+  }
+  
+  .loading-bounce {
+    width: 60px;
+    height: 60px;
+    background-color: #0FF1F6;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  .loading-text {
+    margin-top: 20px;
+    font-family: 'Work Sans', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+  
