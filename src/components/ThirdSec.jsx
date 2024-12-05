@@ -24,7 +24,7 @@ const Root = styled(Box)(({ theme }) => ({
 // Styled Grid for the inner grid layout
 const GridContainer = styled(Grid)(({ theme }) => ({
   display: "grid",
-  gridTemplateColumns: "1fr 1fr",
+  gridTemplateColumns: "repeat(2, 1fr)",
   gap: theme.spacing(2), // Reduced gap between grid items
   width: "100%",
   maxWidth: "900px", // Reduced max-width for closer cells
@@ -96,85 +96,93 @@ const Thirdsec = () => {
 
       {/* 2x2 Grid Layout */}
       <GridContainer container>
-        <HoverEffect item>
-          <Box className="flex items-center justify-center sm:justify-start">
-            <img
-              src="src/assets/Group.png"
-              alt="Quick to ramp"
-              className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
-            />
-            <Typography
-              style={{
-                fontFamily: "Montserrat",
-                fontWeight: "500", // medium
-                fontSize: "20px",
-                color: "#14BCB2",
-              }}
-            >
-              Quick to ramp
-            </Typography>
-          </Box>
-        </HoverEffect>
+        <Grid item>
+          <HoverEffect>
+            <Box className="flex items-center justify-center sm:justify-start">
+              <img
+                src="src/assets/Group.png"
+                alt="Quick to ramp"
+                className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
+              />
+              <Typography
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "500", // medium
+                  fontSize: "20px",
+                  color: "#14BCB2",
+                }}
+              >
+                Quick to ramp
+              </Typography>
+            </Box>
+          </HoverEffect>
+        </Grid>
 
-        <HoverEffect item>
-          <Box className="flex items-center justify-center sm:justify-start">
-            <img
-              src="src/assets/Group.png"
-              alt="Easy to optimize"
-              className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
-            />
-            <Typography
-              style={{
-                fontFamily: "Montserrat",
-                fontWeight: "500", // medium
-                fontSize: "20px",
-                color: "#14BCB2",
-              }}
-            >
-              Easy to optimize
-            </Typography>
-          </Box>
-        </HoverEffect>
+        <Grid item>
+          <HoverEffect>
+            <Box className="flex items-center justify-center sm:justify-start">
+              <img
+                src="src/assets/Group.png"
+                alt="Easy to optimize"
+                className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
+              />
+              <Typography
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "500", // medium
+                  fontSize: "20px",
+                  color: "#14BCB2",
+                }}
+              >
+                Easy to optimize
+              </Typography>
+            </Box>
+          </HoverEffect>
+        </Grid>
 
-        <HoverEffect item>
-          <Box className="flex items-center justify-center sm:justify-start">
-            <img
-              src="src/assets/Group.png"
-              alt="Quick to scale up"
-              className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
-            />
-            <Typography
-              style={{
-                fontFamily: "Montserrat",
-                fontWeight: "500", // medium
-                fontSize: "20px",
-                color: "#14BCB2",
-              }}
-            >
-              Quick to scale up
-            </Typography>
-          </Box>
-        </HoverEffect>
+        <Grid item>
+          <HoverEffect>
+            <Box className="flex items-center justify-center sm:justify-start">
+              <img
+                src="src/assets/Group.png"
+                alt="Quick to scale up"
+                className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
+              />
+              <Typography
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "500", // medium
+                  fontSize: "20px",
+                  color: "#14BCB2",
+                }}
+              >
+                Quick to scale up
+              </Typography>
+            </Box>
+          </HoverEffect>
+        </Grid>
 
-        <HoverEffect item>
-          <Box className="flex items-center justify-center sm:justify-start">
-            <img
-              src="src/assets/Group.png"
-              alt="Works with all your existing tools"
-              className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
-            />
-            <Typography
-              style={{
-                fontFamily: "Montserrat",
-                fontWeight: "500", // medium
-                fontSize: "20px",
-                color: "#14BCB2",
-              }}
-            >
-              Works with all your existing tools
-            </Typography>
-          </Box>
-        </HoverEffect>
+        <Grid item>
+          <HoverEffect>
+            <Box className="flex items-center justify-center sm:justify-start">
+              <img
+                src="src/assets/Group.png"
+                alt="Works with all your existing tools"
+                className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
+              />
+              <Typography
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "500", // medium
+                  fontSize: "20px",
+                  color: "#14BCB2",
+                }}
+              >
+                Works with all your existing tools
+              </Typography>
+            </Box>
+          </HoverEffect>
+        </Grid>
       </GridContainer>
     </Root>
   );

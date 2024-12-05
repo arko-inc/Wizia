@@ -3,8 +3,8 @@ import LaunchIcon from '@mui/icons-material/Launch';
 
 const Lastsec = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-[#07292F] text-center p-8">
-      <h1 className="text-[#0FF1F6] font-montserrat text-[20px] font-light mb-4 hover:text-[#0dcfe6] transition-colors duration-300">GET STARTED</h1>
+    <div className="flex flex-col items-center justify-center h-screen bg-[#07292F] text-center p-8 ">
+      <h1 className="text-[#0FF1F6] font-montserrat text-[20px] font-light mb-4 hover:text-[#0dcfe6] transition-colors duration-300 mt-40">GET STARTED</h1>
       <h2 className="text-white text-[36px] hover:text-[#0FF1F6] transition-colors duration-300">
         <i className="font-medium">Embrace</i> <span className="font-extrabold text-[40px]">the new era of</span> <i className="font-medium">outbound</i>.
       </h2>

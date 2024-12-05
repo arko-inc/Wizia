@@ -3,12 +3,12 @@ import { Box, Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
 import LaunchIcon from '@mui/icons-material/Launch';
 
-// Custom styled components using Material-UI and Tailwind CSS
+
 const Root = styled(Box)(({ theme }) => ({
-  backgroundImage: 'url(src/assets/rightbg.png)', // Replace with your custom image path
+  backgroundImage: `url(${'src/assets/rightbg.png'})`, // Use the imported image
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  height: '100vh', // Full screen height
+  height: '100vh',
   display: 'flex',
   alignItems: 'center',
   padding: theme.spacing(4),
@@ -21,6 +21,7 @@ const CustomButton = styled(Button)(({ theme }) => ({
   borderRadius: '9999px',
   padding: theme.spacing(1, 3),
   marginTop: theme.spacing(4),
+  boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)', // Added shadow for depth
   '&:hover': {
     backgroundColor: '#00cccc',
   },
@@ -56,7 +57,7 @@ const HeroSec = () => {
           className="text-left"
           style={{ fontFamily: 'Work, sans-serif', fontSize: '20px', fontWeight: '300' }}
         >
-          Train an aiDR on your ICP and messaging matrix. 
+          Train an aiDR on your ICP and messaging matrix.
         </Typography>
         <Typography
           variant="body1"
@@ -74,7 +75,7 @@ const HeroSec = () => {
         </Typography>
         <CustomButton
           variant="contained"
-          endIcon={ <LaunchIcon className="ml-2"/>}
+          endIcon={<LaunchIcon className="ml-2" />}
         >
           Sign Up for the Beta
         </CustomButton>

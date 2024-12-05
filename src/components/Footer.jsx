@@ -7,7 +7,11 @@ const Footer = () => {
       <Container className="flex justify-between items-center">
         {/* Logo on the left */}
         <div className="flex items-center">
-          <img src="src/assets/Logo1.png" alt="Logo" className="h-7 w-36" />
+          <img 
+            src="src/assets/Logo1.png"  // Adjusted path assuming you moved image to public folder
+            alt="Logo" 
+            className="h-6 w-32" 
+          />
         </div>
         
         {/* Copyright on the right */}

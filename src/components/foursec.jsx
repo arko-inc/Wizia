@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
 import { styled } from '@mui/system';
 import { ArrowForwardIos, ArrowBackIos } from '@mui/icons-material';
-import SwipeableViews from 'react-swipeable-views';
 
-// Custom styled components using Material-UI and Tailwind CSS
+// Custom styled components
 const Root = styled(Box)(({ theme }) => ({
-  backgroundImage: 'url(src/assets/rightbg.png)', // Replace with your custom image path
+  backgroundImage: 'url(/src/assets/rightbg.png)', // Fixed path for public folder
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  height: '100vh', // Full screen height
+  height: '100vh',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  position: 'relative', // To position arrows
+  position: 'relative',
   color: 'white',
   padding: theme.spacing(4),
 }));
@@ -22,21 +21,26 @@ const CarouselContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   width: '80%',
   position: 'relative',
-  borderRadius: '10px', // Rounded corners for the carousel
-  overflow: 'hidden', // Hide other items when switching
+  borderRadius: '10px',
+  overflow: 'hidden',
+}));
+
+const CarouselWrapper = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  transition: 'transform 0.5s ease-in-out',
+  width: '100%',
 }));
 
 const CarouselItem = styled(Box)(({ theme }) => ({
+  flex: '0 0 100%', // Each item takes 100% of the container width
   backgroundColor: '#002228',
   height: '100%',
-  width: '100%',
   textAlign: 'center',
   padding: theme.spacing(6),
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  transition: 'transform 0.5s ease-in-out',
 }));
 
 const CustomArrow = styled(IconButton)(({ theme }) => ({
@@ -50,31 +54,6 @@ const CustomArrow = styled(IconButton)(({ theme }) => ({
   },
 }));
 
-const CarouselText = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Work, sans-serif',
-  fontSize: '32px',
-  fontWeight: 'light',
-  color: 'white',
-  textAlign: 'center',
-  marginBottom: theme.spacing(2),
-}));
-
-const CarouselSubText = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Work, sans-serif',
-  fontSize: '24px',
-  fontWeight: 'semibold',
-  color: '#0FF1F6',
-  textAlign: 'center',
-}));
-
-const CarouselDescription = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Work, sans-serif',
-  fontSize: '20px',
-  fontWeight: 'regular',
-  color: 'white',
-  textAlign: 'center',
-}));
-
 const DotsContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
@@ -83,87 +62,84 @@ const DotsContainer = styled(Box)(({ theme }) => ({
   width: '100%',
 }));
 
-const Dot = styled(Box)(({ theme, active }) => ({
+const Dot = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'active',
+})(({ active }) => ({
   backgroundColor: active ? '#0FF1F6' : '#fff',
   height: '10px',
   width: '10px',
   borderRadius: '50%',
-  margin: theme.spacing(0.5),
+  margin: '0.5rem',
   transition: 'background-color 0.3s ease',
 }));
 
-// Foursec component
 const Foursec = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  
+  const slides = [
+    {
+      id: 1,
+      icon: 'src/assets/icon.png',  // Fixed path for public folder
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      subText: 'John Doe',
+      description: 'Chief Strategy Officer @ Company',
+    },
+    {
+      id: 2,
+      icon: 'src/assets/icon.png',  // Fixed path for public folder
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      subText: 'Jane Doe',
+      description: 'Chief Technology Officer @ Company',
+    },
+    {
+      id: 3,
+      icon: 'src/assets/icon.png',  // Fixed path for public folder
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      subText: 'Alex Smith',
+      description: 'Chief Marketing Officer @ Company',
+    },
+  ];
+
   const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % 3); // Loop through carousel items
+    setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
 
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev - 1 + 3) % 3); // Loop through carousel items
+    setActiveIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
   };
 
   return (
     <Root>
       <CarouselContainer>
-        {/* Left Arrow */}
-        <CustomArrow onClick={handlePrev} style={{ left: '0' }}>
-          <ArrowBackIos style={{ color: '#fff' }} />
+        <CustomArrow onClick={handlePrev} sx={{ left: '0' }}>
+          <ArrowBackIos sx={{ color: '#07292F' }} />
         </CustomArrow>
-        
-        {/* Carousel Content with SwipeableViews */}
-        <SwipeableViews
-          index={activeIndex}
-          onChangeIndex={setActiveIndex}
-          enableMouseEvents
-        >
-          <CarouselItem>
-            <Box className="mb-4">
-              {/* Add your icon here */}
-              <img src="src/assets/icon.png" alt="icon1" className="w-16 h-16 mx-auto" />
-            </Box>
-            <CarouselText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </CarouselText>
-            <CarouselSubText>John Doe</CarouselSubText>
-            <CarouselDescription>Chief Strategy Officer @ Company</CarouselDescription>
-          </CarouselItem>
-          
-          <CarouselItem>
-            <Box className="mb-4">
-              {/* Add your icon here */}
-              <img src="src/assets/icon.png" alt="icon2" className="w-16 h-16 mx-auto" />
-            </Box>
-            <CarouselText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </CarouselText>
-            <CarouselSubText>John Doe</CarouselSubText>
-            <CarouselDescription>Chief Strategy Officer @ Company</CarouselDescription>
-          </CarouselItem>
-          
-          <CarouselItem>
-            <Box className="mb-4">
-              {/* Add your icon here */}
-              <img src="src/assets/icon.png" alt="icon3" className="w-16 h-16 mx-auto" />
-            </Box>
-            <CarouselText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </CarouselText>
-            <CarouselSubText>John Doe</CarouselSubText>
-            <CarouselDescription>Chief Strategy Officer @ Company</CarouselDescription>
-          </CarouselItem>
-        </SwipeableViews>
-        
-        {/* Right Arrow */}
-        <CustomArrow onClick={handleNext} style={{ right: '0' }}>
-          <ArrowForwardIos style={{ color: '#fff' }} />
+
+        <CarouselWrapper sx={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+          {slides.map((slide) => (
+            <CarouselItem key={slide.id}>
+              <Box className="mb-4">
+                <img src={slide.icon} alt={`icon${slide.id}`} className="w-16 h-16 mx-auto" />
+              </Box>
+              <Typography variant="h4" color="white">
+                {slide.text}
+              </Typography>
+              <Typography variant="subtitle1" color="#0FF1F6">
+                {slide.subText}
+              </Typography>
+              <Typography variant="body1" color="white">
+                {slide.description}
+              </Typography>
+            </CarouselItem>
+          ))}
+        </CarouselWrapper>
+
+        <CustomArrow onClick={handleNext} sx={{ right: '0' }}>
+          <ArrowForwardIos sx={{ color: '#fff' }} />
         </CustomArrow>
       </CarouselContainer>
 
-      {/* Dots Indicator */}
       <DotsContainer>
-        {[0, 1, 2].map((index) => (
+        {slides.map((_, index) => (
           <Dot key={index} active={index === activeIndex} />
         ))}
       </DotsContainer>
