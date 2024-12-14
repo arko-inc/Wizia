@@ -6,7 +6,7 @@ import Fivesec from '../components/FIvesec'
 import HeroSec from '../components/HeroSec'
 import CardSec from '../components/CardSec'
 import Thirdsec from '../components/ThirdSec'
-import Secondsec from '../components/SecondSec'
+import Secondsec from './Secondsec'
 import Foursec from '../components/foursec'
 function Home() {
   const [count, setCount] = useState(0)

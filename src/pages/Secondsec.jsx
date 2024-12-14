@@ -33,7 +33,7 @@ const HoverEffect = styled(Box)({
   },
 });
 
-const Secondsec = () => {
+function Secondsec(){
   const partners = [
     { src: BackHub, alt: 'BackHub' },
     { src: CableLabs, alt: 'CableLabs' },
