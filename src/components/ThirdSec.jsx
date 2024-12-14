@@ -100,7 +100,7 @@ const Thirdsec = () => {
           <HoverEffect>
             <Box className="flex items-center justify-center sm:justify-start">
               <img
-                src="src/assets/Group.png"
+                src="https://i.imghippo.com/files/FnHy2216hI.png"
                 alt="Quick to ramp"
                 className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
               />
@@ -122,7 +122,7 @@ const Thirdsec = () => {
           <HoverEffect>
             <Box className="flex items-center justify-center sm:justify-start">
               <img
-                src="src/assets/Group.png"
+                src="https://i.imghippo.com/files/FnHy2216hI.png"
                 alt="Easy to optimize"
                 className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
               />
@@ -144,7 +144,7 @@ const Thirdsec = () => {
           <HoverEffect>
             <Box className="flex items-center justify-center sm:justify-start">
               <img
-                src="src/assets/Group.png"
+                src="https://i.imghippo.com/files/FnHy2216hI.png"
                 alt="Quick to scale up"
                 className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
               />
@@ -166,7 +166,7 @@ const Thirdsec = () => {
           <HoverEffect>
             <Box className="flex items-center justify-center sm:justify-start">
               <img
-                src="src/assets/Group.png"
+                src="https://i.imghippo.com/files/FnHy2216hI.png"
                 alt="Works with all your existing tools"
                 className="w-4 h-4 mr-4" // Adjusts the icon size and margin-right for spacing
               />
