@@ -5,7 +5,7 @@ import LaunchIcon from '@mui/icons-material/Launch';
 
 
 const Root = styled(Box)(({ theme }) => ({
-  backgroundImage: `url(${'src/assets/rightbg.png'})`, // Use the imported image
+  backgroundImage: `url(${'src/components/rightbg.png'})`, // Use the imported image
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '100vh',

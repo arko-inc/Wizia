@@ -3,7 +3,7 @@ import { Grid, Typography, Box } from '@mui/material';
 import { styled } from '@mui/system';
 
 const Root = styled(Box)(({ theme }) => ({
-  backgroundImage: 'url(/src/assets/rightbg.png)',
+  backgroundImage: 'url(/src/components/rightbg.png)',
   backgroundSize: 'cover',
   padding: theme.spacing(4),
   color: 'white',

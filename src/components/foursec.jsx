@@ -5,7 +5,7 @@ import { ArrowForwardIos, ArrowBackIos } from '@mui/icons-material';
 
 // Custom styled components
 const Root = styled(Box)(({ theme }) => ({
-  backgroundImage: 'url(/src/assets/rightbg.png)', // Fixed path for public folder
+  backgroundImage: 'url(/src/components/rightbg.png)', // Fixed path for public folder
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '100vh',

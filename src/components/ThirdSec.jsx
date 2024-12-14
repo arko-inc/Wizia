@@ -4,7 +4,7 @@ import { styled } from "@mui/system";
 
 // Styled Box for the root container
 const Root = styled(Box)(({ theme }) => ({
-  backgroundImage: "url('src/assets/leftbg.png')", // Update with your background image
+  backgroundImage: "url('src/components/leftbg.png')", // Update with your background image
   backgroundSize: "cover",
   backgroundPosition: "center",
   display: "flex",
