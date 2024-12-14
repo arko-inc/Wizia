@@ -31,6 +31,7 @@ function App() {
           <Route path="/five" element={<FIvesec />} /> 
           <Route path="/footer" element={<Footer />} /> 
           <Route path="/hero" element={<HeroSec />} />
+          <Route path="/second" element={<SecondSec />} />
            <Route path="/last" element={<Lastsec />} />
             <Route path="/loading" element={<Loading />} /> 
              <Route path="/third" element={<ThirdSec />} />
