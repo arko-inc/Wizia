@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import HeroSec from "./components/HeroSec";
 import Lastsec from "./components/Lastsec";
 import Loading from "./components/Loading";
-// import Secondsec from "./components/SecondSec";
+import Secondsec from "./components/SecondSec";
 import ThirdSec from "./components/ThirdSec";
 import Foursec from "./components/foursec";
 
@@ -33,7 +33,6 @@ function App() {
           <Route path="/hero" element={<HeroSec />} />
            <Route path="/last" element={<Lastsec />} />
             <Route path="/loading" element={<Loading />} /> 
-            {/* <Route path="/second" element={<Secondsec />} /> */}
              <Route path="/third" element={<ThirdSec />} />
               <Route path="/four" element={<Foursec />} />
           </Routes>
