@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Logo on the left */}
         <div className="flex items-center">
           <img 
-            src="src/assets/Logo1.png"  // Adjusted path assuming you moved image to public folder
+            src="https://i.imghippo.com/files/kHsj4378fB.png"  // Adjusted path assuming you moved image to public folder
             alt="Logo" 
             className="h-6 w-32" 
           />

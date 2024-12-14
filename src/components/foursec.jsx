@@ -5,7 +5,7 @@ import { ArrowForwardIos, ArrowBackIos } from '@mui/icons-material';
 
 // Custom styled components
 const Root = styled(Box)(({ theme }) => ({
-  backgroundImage: 'url(/src/components/rightbg.png)', // Fixed path for public folder
+  backgroundImage: 'url(https://i.imghippo.com/files/UbS9940EQ.png)', // Fixed path for public folder
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '100vh',
@@ -78,21 +78,21 @@ const Foursec = () => {
   const slides = [
     {
       id: 1,
-      icon: 'src/assets/icon.png',  // Fixed path for public folder
+      icon: 'https://i.imghippo.com/files/zXNM4219cNc.png',  // Fixed path for public folder
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       subText: 'John Doe',
       description: 'Chief Strategy Officer @ Company',
     },
     {
       id: 2,
-      icon: 'src/assets/icon.png',  // Fixed path for public folder
+      icon: 'https://i.imghippo.com/files/zXNM4219cNc.png',  // Fixed path for public folder
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       subText: 'Jane Doe',
       description: 'Chief Technology Officer @ Company',
     },
     {
       id: 3,
-      icon: 'src/assets/icon.png',  // Fixed path for public folder
+      icon: 'https://i.imghippo.com/files/zXNM4219cNc.png',  // Fixed path for public folder
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       subText: 'Alex Smith',
       description: 'Chief Marketing Officer @ Company',
